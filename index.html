@@ -17,6 +17,9 @@
             function changeImg() {
                 let img = document.getElementById("meme");
                 current_i += 1;
+                            if (current_i > (img.length - 1)) {
+                                            current_i = 0;
+                            }
                 img.src = imgs[current_i];
             }
 
