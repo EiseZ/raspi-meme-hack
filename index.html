@@ -23,7 +23,11 @@
             async function fetchUrls() {
                 fetch("https://raw.githubusercontent.com/EiseZ/raspi-meme-hack/main/urls.json")
                                 .then((response) => response.json())
-                                .then((data) => imgs = data.url);
+                                .then((data) => { updateImgs(data) });
+            }
+
+            function updateImgs(data) {
+                imgs = data;
             }
 
             setInterval(changeImg, 10000);
