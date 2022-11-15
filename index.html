@@ -20,7 +20,15 @@
             ];
             let current_i = 0;
 
-            setInterval(changeImg, 30000);
+            async function fetchUrls() {
+                fetch("https://raw.githubusercontent.com/EiseZ/raspi-meme-hack/main/urls.json")
+                                .then((response) => response.json())
+                                .then((data) => imgs = data.url);
+            }
+
+            setInterval(changeImg, 10000);
+            setInterval(fetchUrls, 120000);
+            fetchUrls();
             changeImg();
 
             function changeImg() {
