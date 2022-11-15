@@ -31,7 +31,6 @@
             }
 
             setInterval(changeImg, 10000);
-            setInterval(fetchUrls, 120000);
             fetchUrls();
             changeImg();
 
@@ -40,6 +39,7 @@
                 current_i += 1;
                             if (current_i >= imgs.length) {
                                             current_i = 0;
+                                            fetchUrls();
                             }
                 img.src = imgs[current_i];
             }
