@@ -4,47 +4,6 @@
         <title>HAHHAH</title>
     </head>
     <body style="background-color: #000000; width: 100vw; heigth: 100vh; display: flex; justify-content: center; align-items: center; margin: 0; padding: 0;">
-        <img style="margin: 0; padding: 0; height: 100vh;" id="meme" src="https://imgflip.com/6zy5t0.jpg" alt="meme" />
-        <script>
-            let imgs = [
-                "https://preview.redd.it/yonb0z3jjsm21.jpg?width=960&crop=smart&auto=webp&s=6da7d2ea08577b1f13834af5fe90ddb6c40a7427",
-                "https://i.imgflip.com/700dlb.jpg",
-                "https://i.imgflip.com/700e02.jpg",
-                "https://preview.redd.it/yqy3z0fk4xh91.jpg?width=640&crop=smart&auto=webp&s=407469b79d6ddf2ceb61c67785d0d1bc2dec6aec",
-                "https://preview.redd.it/h4lcgiikd7591.jpg?width=640&crop=smart&auto=webp&s=980957338427476b0bbe9759c3b19a1184df0baa",
-                "https://preview.redd.it/8rianwpy32371.jpg?width=640&crop=smart&auto=webp&s=7334c0c621e63a3c5e8404b7fd272f3fb9068c0c",
-                "https://preview.redd.it/hhcr0nwdppb41.jpg?width=640&crop=smart&auto=webp&s=6bc2c28ab1c4caea82a8327691d48387e593850a",
-                "https://preview.redd.it/6mvsu2ac4n591.jpg?width=640&crop=smart&auto=webp&s=79ebda644ecc7655e717fb212a19d8e37b227510",
-                "https://i.redd.it/evw99wcen6p61.jpg",
-                "https://i.imgflip.com/6zy9pj.jpg"
-            ];
-            let current_i = 0;
-
-            async function fetchUrls() {
-                fetch("https://raw.githubusercontent.com/EiseZ/raspi-meme-hack/main/urls.json")
-                                .then((response) => response.json())
-                                .then((data) => { updateImgs(data) });
-            }
-
-            function updateImgs(data) {
-                imgs = data.urls;
-            }
-
-            setInterval(changeImg, 10000);
-            fetchUrls();
-            changeImg();
-
-            function changeImg() {
-                let img = document.getElementById("meme");
-                current_i += 1;
-                            if (current_i >= imgs.length) {
-                                            current_i = 0;
-                                            fetchUrls();
-                            }
-                img.src = imgs[current_i];
-            }
-
-
-        </script>
+        <video class="vjs-tech" data-testid="livestream-player" playsinline="playsinline" id="vjs_video_3_html5_api" tabindex="-1" src="blob:https://nos.nl/e3becd28-fb67-473c-80f5-398b12cda711" muted="muted"></video>
     </body>
 </html>
